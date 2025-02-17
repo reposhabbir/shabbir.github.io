@@ -1,91 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shabbir Syed - Portfolio</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <meta name="description" content="Shabbir Syed - Java Full Stack Developer Portfolio">
+    <title>Shabbir Syed - Java Full Stack Developer</title>
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
-    <!-- Header -->
-    <header id="home">
+    <header>
         <nav>
-            <div class="logo">Shabbir Syed</div>
             <ul>
-                <li><a href="#about">About</a></li>
+                <li><a href="#about">About Me</a></li>
                 <li><a href="#skills">Skills</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
-        <div class="intro">
-            <h1>Shabbir Syed</h1>
-            <p>Passionate Java Full Stack Developer | 2+ Years of Experience</p>
-        </div>
     </header>
 
-    <!-- About Section -->
-    <section id="about">
-        <div class="container">
-            <h2>About Me</h2>
+    <main>
+        <section id="about" class="section">
+            <h1>About Me</h1>
             <p>Code isn’t just logic—it’s creativity, precision, and a way to push limits. A Java Full Stack Developer with 2+ years of experience, fluent in Java, Spring Boot, Hibernate, SQL, Kafka, Docker, Kubernetes, and Cloud—building scalable solutions that perform. Passionate about solving complex problems, mastering new technologies, and evolving with the ever-changing tech landscape.</p>
-        </div>
-    </section>
+        </section>
 
-    <!-- Skills Section -->
-    <section id="skills">
-        <div class="container">
+        <section id="skills" class="section">
             <h2>Skills</h2>
-            <div class="skill">
-                <div class="skill-bar" style="width: 90%;">Java</div>
-            </div>
-            <div class="skill">
-                <div class="skill-bar" style="width: 85%;">Spring Boot</div>
-            </div>
-            <div class="skill">
-                <div class="skill-bar" style="width: 80%;">SQL</div>
-            </div>
-            <div class="skill">
-                <div class="skill-bar" style="width: 70%;">Docker</div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Projects Section -->
-    <section id="projects">
-        <div class="container">
-            <h2>Projects</h2>
-            <div class="project">
-                <h3>Project 1: NEFT Transaction API</h3>
-                <p>A secure and scalable API for NEFT transactions built with Spring Boot and integrated with Kafka for message processing.</p>
-            </div>
-            <div class="project">
-                <h3>Project 2: RTGS Integration</h3>
-                <p>An RTGS API that integrates with external systems for real-time financial transactions, utilizing Spring Boot and Kafka.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact">
-        <div class="container">
-            <h2>Contact</h2>
-            <p>Feel free to reach out to me through email or LinkedIn!</p>
             <ul>
-                <li>Email: shabbir@example.com</li>
-                <li>LinkedIn: <a href="https://www.linkedin.com/in/shabbirsyed/">linkedin.com/in/shabbirsyed</a></li>
+                <li>Java</li>
+                <li>Spring Boot</li>
+                <li>Hibernate</li>
+                <li>SQL</li>
+                <li>CI/CD</li>
+                <li>Docker & Kubernetes</li>
+                <li>Kafka</li>
+                <li>Cloud Services</li>
             </ul>
-        </div>
-    </section>
+        </section>
 
-    <!-- Footer -->
+        <section id="projects" class="section">
+            <h2>Projects</h2>
+            <p>Some of my recent projects include web applications and enterprise-level solutions using the latest technologies.</p>
+        </section>
+
+        <section id="contact" class="section">
+            <h2>Contact</h2>
+            <form>
+                <label for="name">Your Name</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Your Email</label>
+                <input type="email" id="email" name="email" required>
+
+                <button type="submit">Send Message</button>
+            </form>
+        </section>
+    </main>
+
     <footer>
-        <div class="container">
-            <p>&copy; 2025 Shabbir Syed. All Rights Reserved.</p>
-        </div>
+        <p>&copy; 2025 Shabbir Syed. All rights reserved.</p>
     </footer>
 
     <script src="scripts.js"></script>
 </body>
+
 </html>
