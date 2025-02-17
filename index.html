@@ -5,65 +5,92 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Shabbir Syed - Java Full Stack Developer Portfolio">
+    <meta name="keywords" content="Shabbir Syed, Full Stack Developer, Java, Spring, Hibernate, Portfolio">
     <title>Shabbir Syed - Java Full Stack Developer</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" 
+          integrity="sha384-KyZXEJpJXQ3Q3Yt3j9MwJHa8e65PlY02u0Lx1WRnm8ckXj3FVc5xnW6nXeMOti30" crossorigin="anonymous">
+    <!-- Custom CSS -->
     <link rel="stylesheet" href="styles.css">
 </head>
 
-<body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="#about">About Me</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
+<body ng-app="portfolioApp">
+    <header class="bg-dark text-white p-4">
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <a class="navbar-brand" href="#">Shabbir Syed</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#about">About Me</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+            </div>
         </nav>
     </header>
 
     <main>
-        <section id="about" class="section">
-            <h1>About Me</h1>
-            <p>Code isn’t just logic—it’s creativity, precision, and a way to push limits. A Java Full Stack Developer with 2+ years of experience, fluent in Java, Spring Boot, Hibernate, SQL, Kafka, Docker, Kubernetes, and Cloud—building scalable solutions that perform. Passionate about solving complex problems, mastering new technologies, and evolving with the ever-changing tech landscape.</p>
+        <section id="about" class="section p-5 bg-light">
+            <div class="container">
+                <h1 class="text-center">About Me</h1>
+                <p>Code isn’t just logic—it’s creativity, precision, and a way to push limits. A Java Full Stack Developer with 2+ years of experience, fluent in Java, Spring Boot, Hibernate, SQL, Kafka, Docker, Kubernetes, and Cloud—building scalable solutions that perform. Passionate about solving complex problems, mastering new technologies, and evolving with the ever-changing tech landscape.</p>
+            </div>
         </section>
 
-        <section id="skills" class="section">
-            <h2>Skills</h2>
-            <ul>
-                <li>Java</li>
-                <li>Spring Boot</li>
-                <li>Hibernate</li>
-                <li>SQL</li>
-                <li>CI/CD</li>
-                <li>Docker & Kubernetes</li>
-                <li>Kafka</li>
-                <li>Cloud Services</li>
-            </ul>
+        <section id="skills" class="section p-5">
+            <div class="container">
+                <h2 class="text-center">Skills</h2>
+                <ul class="list-group">
+                    <li class="list-group-item">Java</li>
+                    <li class="list-group-item">Spring Boot</li>
+                    <li class="list-group-item">Hibernate</li>
+                    <li class="list-group-item">SQL</li>
+                    <li class="list-group-item">CI/CD</li>
+                    <li class="list-group-item">Docker & Kubernetes</li>
+                    <li class="list-group-item">Kafka</li>
+                    <li class="list-group-item">Cloud Services</li>
+                </ul>
+            </div>
         </section>
 
-        <section id="projects" class="section">
-            <h2>Projects</h2>
-            <p>Some of my recent projects include web applications and enterprise-level solutions using the latest technologies.</p>
+        <section id="projects" class="section p-5 bg-light">
+            <div class="container">
+                <h2 class="text-center">Projects</h2>
+                <p>Some of my recent projects include web applications and enterprise-level solutions using the latest technologies.</p>
+            </div>
         </section>
 
-        <section id="contact" class="section">
-            <h2>Contact</h2>
-            <form>
-                <label for="name">Your Name</label>
-                <input type="text" id="name" name="name" required>
-
-                <label for="email">Your Email</label>
-                <input type="email" id="email" name="email" required>
-
-                <button type="submit">Send Message</button>
-            </form>
+        <section id="contact" class="section p-5">
+            <div class="container">
+                <h2 class="text-center">Contact</h2>
+                <form ng-submit="submitForm()" novalidate>
+                    <div class="mb-3">
+                        <label for="name" class="form-label">Your Name</label>
+                        <input type="text" class="form-control" id="name" ng-model="formData.name" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Your Email</label>
+                        <input type="email" class="form-control" id="email" ng-model="formData.email" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                </form>
+            </div>
         </section>
     </main>
 
-    <footer>
+    <footer class="bg-dark text-white p-3 text-center">
         <p>&copy; 2025 Shabbir Syed. All rights reserved.</p>
     </footer>
 
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- AngularJS Script -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.2/angular.min.js"></script>
+    <!-- Custom JavaScript -->
     <script src="scripts.js"></script>
 </body>
 
