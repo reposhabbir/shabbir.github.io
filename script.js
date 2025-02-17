@@ -1,14 +1,25 @@
-var app = angular.module('portfolioApp', []);
+const hamburger = document.querySelector('.header .nav-bar .nav-list .hamburger');
+const mobile_menu = document.querySelector('.header .nav-bar .nav-list ul');
+const menu_item = document.querySelectorAll('.header .nav-bar .nav-list ul li a');
+const header = document.querySelector('.header.container');
 
-app.controller('FormController', function ($scope) {
-    $scope.formData = {};
+hamburger.addEventListener('click', () => {
+	hamburger.classList.toggle('active');
+	mobile_menu.classList.toggle('active');
+});
 
-    $scope.submitForm = function () {
-        if ($scope.formData.name && $scope.formData.email) {
-            alert('Thank you, ' + $scope.formData.name + '! We will contact you at ' + $scope.formData.email + '.');
-            $scope.formData = {}; // Clear form
-        } else {
-            alert('Please fill in all fields!');
-        }
-    };
+document.addEventListener('scroll', () => {
+	var scroll_position = window.scrollY;
+	if (scroll_position > 250) {
+		header.style.backgroundColor = '#29323c';
+	} else {
+		header.style.backgroundColor = 'transparent';
+	}
+});
+
+menu_item.forEach((item) => {
+	item.addEventListener('click', () => {
+		hamburger.classList.toggle('active');
+		mobile_menu.classList.toggle('active');
+	});
 });
