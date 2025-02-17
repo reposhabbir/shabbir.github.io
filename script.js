@@ -1,24 +1,14 @@
-// Smooth Scroll for Navigation Links
-document.querySelectorAll('nav a').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
+var app = angular.module('portfolioApp', []);
 
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-            behavior: 'smooth'
-        });
-    });
-});
+app.controller('FormController', function ($scope) {
+    $scope.formData = {};
 
-// Simple form validation (can be extended)
-document.querySelector('form').addEventListener('submit', function (e) {
-    e.preventDefault();
-    const name = document.querySelector('#name').value;
-    const email = document.querySelector('#email').value;
-
-    if (name === "" || email === "") {
-        alert("Please fill in both fields!");
-        return;
-    }
-
-    alert(`Thank you, ${name}! We will contact you at ${email}.`);
+    $scope.submitForm = function () {
+        if ($scope.formData.name && $scope.formData.email) {
+            alert('Thank you, ' + $scope.formData.name + '! We will contact you at ' + $scope.formData.email + '.');
+            $scope.formData = {}; // Clear form
+        } else {
+            alert('Please fill in all fields!');
+        }
+    };
 });
