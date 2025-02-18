@@ -1,4 +1,4 @@
-var app = angular.module('myApp', []);
+ var app = angular.module('myApp', []);
 
 app.controller('NavController', function ($scope, $window) {
     $scope.menuActive = false;
